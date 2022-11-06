@@ -1,12 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import { ErrorBoundary } from "react-error-boundary";
-import {  Route, Routes, useNavigate } from "react-router-dom";
-import { userAuthContext } from "../Context/userAuthContext";
+import { Route, Routes, useNavigate } from "react-router-dom";
+// import { userAuthContext } from "../Context/userAuthContext";
 import NavigationBar from "./NavigationBar";
 import Profile from "./Profile";
 import Contact from "./Contact";
 import Home from "./Home";
-
 
 const ErrorFallback = ({ error, resetErrorBoundary }) => {
   return (
@@ -20,29 +19,23 @@ const ErrorFallback = ({ error, resetErrorBoundary }) => {
 const Savepro = () => {
   const MoveTo = useNavigate;
 
-  const { username } =
-  useContext(userAuthContext);
+  // const { username } =
+  // useContext(userAuthContext);
 
   return (
     <div>
-      <NavigationBar/>
+      <NavigationBar />
       <ErrorBoundary
         FallbackComponent={ErrorFallback}
         onReset={() => MoveTo("/")}
       >
-         <Routes>
-            <Route path="/" element={<Home/>} />
-            <Route path="/profile" element={<Profile/>} />
-            <Route path="/contact" element={<Contact/>}/>
-             
-            <Route path="*" element={<div className="error">error page</div>} />
-          </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/contact" element={<Contact />} />
 
-
-
-        Welcome {username}
-
-     
+          <Route path="*" element={<div className="error">error page</div>} />
+        </Routes>
       </ErrorBoundary>
     </div>
   );
