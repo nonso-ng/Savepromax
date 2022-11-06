@@ -2,6 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { userAuthContext } from "../Context/userAuthContext";
+import avatar from "../images/man.png";
 
 const Profile = () => {
   const { username } = useContext(userAuthContext);
@@ -10,14 +11,14 @@ const Profile = () => {
   return (
     <>
       <Helmet>
-        <title>LoginPage</title>
+        <title>Profile</title>
         <meta name="description" content="Show user profile and details" />
         <link rel="canonical" href="/profile" />
       </Helmet>
 
       <div className="userprofile">
         <div>
-          <img src="" alt="user-img" />
+          <img src={avatar} alt="user-img" className="user-img" />
         </div>
         <div>
           <h1> User Profile</h1>

@@ -9,16 +9,13 @@ import { Helmet } from "react-helmet-async";
 const Home = () => {
   const { username } = useContext(userAuthContext);
 
-
- 
-
   return (
     <section>
-        <Helmet>
-      <title>Home</title>
-      <meta name="description" content="Welcome to the home page" />     
-      <link rel="canonical" href="/home"/>
-    </Helmet>
+      <Helmet>
+        <title>Home</title>
+        <meta name="description" content="Welcome to the home page" />
+        <link rel="canonical" href="/home" />
+      </Helmet>
 
       <section className="first-section">
         <div className="first-section-left">

@@ -1,7 +1,6 @@
 import React from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import { Route, Routes, useNavigate } from "react-router-dom";
-// import { userAuthContext } from "../Context/userAuthContext";
 import NavigationBar from "./NavigationBar";
 import Profile from "./Profile";
 import Contact from "./Contact";
@@ -19,9 +18,6 @@ const ErrorFallback = ({ error, resetErrorBoundary }) => {
 const Savepro = () => {
   const MoveTo = useNavigate;
 
-  // const { username } =
-  // useContext(userAuthContext);
-
   return (
     <div>
       <NavigationBar />
@@ -34,7 +30,10 @@ const Savepro = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/contact" element={<Contact />} />
 
-          <Route path="*" element={<div className="error">Page no longer exist!!</div>} />
+          <Route
+            path="*"
+            element={<div className="error">Page no longer exist!!</div>}
+          />
         </Routes>
       </ErrorBoundary>
     </div>

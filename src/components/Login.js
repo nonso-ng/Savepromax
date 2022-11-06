@@ -62,7 +62,7 @@ const Login = () => {
             <button className="btn">SUBMIT</button>
           </form>
         </div>
-        <div class="bg-img"></div>
+        <div class="login-img"></div>
       </div>
     </>
   );

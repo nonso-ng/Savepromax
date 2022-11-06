@@ -46,7 +46,7 @@ form {
   letter-spacing: 5px;
 }
 
-.bg-img {
+.login-img {
   background-image: url(images/phonie.jpeg);
   background-position: center;
   background-size: cover;
@@ -114,7 +114,7 @@ form {
 .first-section-left {
   position: relative;
   left: 10px;
-  margin: 120px;
+  margin: 100px;
 }
 .first-section-left span {
   color: #238aab;
@@ -129,6 +129,9 @@ form {
   font-family: monospace;
   font-size: 20px;
 }
+
+
+
 .first-section-right .bg-img {
   max-height: 600px;
   margin-top: 40px;
@@ -205,9 +208,10 @@ form {
   position: relative;
   top: 70px;
 }
-.third-section-right {
-  position: relative;
-  top: 30px;
+
+.third-section-right .phone-img {
+max-width: 750px;
+max-height: 750px;
 }
 footer {
   display: flex;
@@ -231,7 +235,62 @@ footer {
 
 /* PROFILE PAGE STYLING */
 .userprofile {
- display: flex;
- justify-content: center;
- align-items: center;
+ 
+border: 1px solid black;
+ font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+ "Lucida Sans", Arial, sans-serif;
+}
+
+.user-img{
+  max-height: 10%;
+  max-width: 10%;
+  border-radius: 50%;
+}
+.contact-layout{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+
+}
+
+.contact-content h1{
+  margin-top: 50px;
+  margin-left: 10px;
+  font-size: larger;
+}
+ .contact-content form{
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+}
+.contact-content form input{
+  padding:10px;
+  background-color: #dedede;
+  font-weight: 600;
+  width:600px;
+  height: 30px;
+  margin: 10px;
+  border-radius: 10px;
+  border-style: none;
+  padding-left: 25px;
+}
+
+.contact-content form textarea{
+  padding: 20px;
+  background-color: #dedede;
+  font-weight: 600;
+  height: 100px;
+  width:590px;
+  margin: 10px;
+  border-radius: 10px;
+  padding-left: 25px;
+}
+
+.contact-img{
+  background-image: url(images/phonie.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  height: 100vh;
 }
