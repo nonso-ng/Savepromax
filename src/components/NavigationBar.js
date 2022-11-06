@@ -28,7 +28,7 @@ const NavigationBar = () => {
           </li>
           <li>
             <NavLink to="/contact" className="anchor">
-              CONTACT ME
+              CONTACT US
             </NavLink>
           </li>
         </ul>

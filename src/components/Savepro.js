@@ -34,7 +34,7 @@ const Savepro = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/contact" element={<Contact />} />
 
-          <Route path="*" element={<div className="error">error page</div>} />
+          <Route path="*" element={<div className="error">Page no longer exist!!</div>} />
         </Routes>
       </ErrorBoundary>
     </div>
